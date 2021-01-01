@@ -1,0 +1,82 @@
+<html>
+<title>Demo Page</title>
+<head>
+  <link rel="stylesheet" type="text/css" href="design.css">
+  <script>
+  function validate()
+  {
+  var user=document.f1.user.value;
+  var regnum=document.f1.regnum.value;
+  var mail=document.f1.mail.value;
+  var pass=document.f1.pswd.value;
+  var football=document.f1.football.checked;
+  var cricket=document.f1.checked;
+  var chess=document.f1.checked;
+  var male=document.f1.male.checked;
+  var female=document.f1.female.checked;
+  var sub=document.f1.subs.value;
+  var address=document.f1.address.value;
+  if(user=="")
+  {
+    alert("You have to fill all the fields");
+  }
+  else if(regnum=="")
+  {
+    alert("You have to fill all the fields");
+  }
+  else if(mail=="")
+  {
+    alert("You have to fill all the fields");
+  }
+  else if(pass=="")
+  {
+    alert("You have to fill all the fields");
+  }
+  else if(football==false && cricket==false && chess==false)
+  {
+    alert("please select atleast one game");
+  }
+  else if(male==false && female==false)
+  {
+    alert("You have to fill all the fields");
+  }
+  else if(sub=="Select an Subject")
+  {
+    alert("You have to select your Favourite Subject");
+  }
+  else if(address=="")
+  {
+    alert("You have to fill all the fields");
+  }
+  else if(male==true && female==true)
+  {
+    alert("You have to select only one gender");
+  }
+}
+  </script>
+</head>
+<body>
+
+<form method="post" name="f1" onsubmit="validate()">
+<table class ="t1" align="center">
+  <h1 align="center">Registration Form</h1>
+<tr><td><h3 class="name">Name of the Student:</h3></td><td><input type="text" name="user"><br></td></tr>
+<tr><td><h3 class="num">Reg Num:</h3></td><td><input type="text" name="regnum"><br></td></tr>
+<tr><td><h3 class="mail">Mail ID:</h3></td><td><input type="email" name="mail"><br></td></tr>
+<tr><td><h3 class="pass">Password:</h3></td><td><input type="password" name="pswd"><br><br></td></tr>
+<tr><td><br><h3 class="game">Favourite Game:</h3></td><td>Football<input type="checkbox" name="football"></td><td>Cricket<input type="checkbox" name="cricket"></td><td>Chess<input type="checkbox" name="chess"></td></tr>
+<tr><td><h3 class="gender">Gender:</h3></td><td>Male<input type="radio" name="male"></td><td>Female<input type="radio" name="female"></td></tr>
+<tr><td><h3 class="sub">Favourite subject:</td><td>
+<select name="subs">
+  <option value="Select an Subject">Select an Subject</option>
+  <option value="c">c</option>
+  <option value="py">py</option>
+  <option value="html">html</option>
+  <option value="java">java</option>
+</select></td></tr>
+<tr><td><h3 class="address">Address:</h3></td><td><input type="text" name="address"></td></tr>
+<tr><td><input type="submit" value="REGISTER" class ="in"></td></tr>
+</table>
+</form>
+</body>
+</html>
