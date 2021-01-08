@@ -1,0 +1,18 @@
+create database epdemo;
+use epdemo;
+create table demotable(num bigint,name varchar(30),email varchar(30),marks int,class varchar(5));
+insert into demotable values(190030286,"Mohan Vamsi","190030286@kluniversity.in",90,"1A");
+insert into demotable values(190030430,"Rakesh","190030430@kluniversity.in",90,"1B");
+insert into demotable values(190031152,"Satish","190031152@kluniversity.in",98,"1C");
+insert into demotable values(190031153,"Akhil","190031153@kluniversity.in",90,"2B");
+insert into demotable values(190030429,"Shiva","190030429@kluniversity.in",95,"1D");
+select * from demotable;
+delete from demotable where num=190030429;
+update demotable set marks=0 where num=190031152;
+alter table demotable drop column class;
+alter table demotable add class varchar(5);
+alter table demotable add department varchar(10);
+alter table demotable add cgpa double;
+alter table demotable add city varchar(10);
+update  demotable set  city="Anaparthi" where num=190030429;
+select * from demotable;
