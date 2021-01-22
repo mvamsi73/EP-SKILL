@@ -98,7 +98,6 @@ public class studentmain {
 			case 5:
 				System.exit(0);
 			}
-			
 		}
 	}
 
