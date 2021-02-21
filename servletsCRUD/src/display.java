@@ -62,7 +62,7 @@ public class display extends HttpServlet {
 			pw.print("<a href='index.html' >Go to Home</a>");
 			pw.print("<table border='1' width='100%'>");
 			pw.println("<h1>Employees List</h1>"); 
-            pw.print("<tr><th>EMPID</th><th>Name</th><th>Password</th><th>Email</th><th>Country</th></tr>");
+            pw.print("<tr><th>EMPID</th><th>Name</th><th>Email</th><th>Password</th><th>Country</th></tr>");
 			while(rst.next())
 			{	                   
 	            pw.print("<tr><td>"+rst.getInt(1)+"</td><td>"+rst.getString(2)+"</td><td>"+rst.getString(3)+"</td><td>"+rst.getString(4)+"</td><td>"+rst.getString(5)+"</tr>");  
