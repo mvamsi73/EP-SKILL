@@ -22,7 +22,7 @@ ResultSet rst=ps.executeQuery();
 <table align="center">
 <% while(rst.next()){ %>
 <tr><td>Employee ID:</td><td><input type="text" placeholder= <%= rst.getInt(1) %> name="empid" value=<%=rst.getInt(1) %>></td></tr>
-<tr><td>Employee Name:</td><td><input type="text" placeholder= <%= rst.getString(2) %> name="name" value=<%=rst.getString(2) %>></td></tr>
+<tr><td>Employee Name:</td><td><input type="text" placeholder= '<%= rst.getString(2) %>' name="name" value='<%=rst.getString(2) %>'></td></tr>
 <tr><td>Employee Password:</td><td><input type="password" placeholder= <%= rst.getString(3) %> name="password" value=<%=rst.getString(3) %>></td></tr>
 <tr><td>Employee Email:</td><td><input type="email" placeholder= <%= rst.getString(4) %> name="email" value=<%=rst.getString(4) %>></td></tr>
 <tr><td>Employee Country:</td><td><select id="Country" name="country">
