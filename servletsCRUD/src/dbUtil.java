@@ -11,7 +11,7 @@ public class dbUtil
 	public static Connection dbConnection() throws ClassNotFoundException, SQLException
 	{
 		Class.forName(forname);
-		Connection con=DriverManager.getConnection(dburl,username,password);
+		Connection con=DriverManager.getConnection(dburl ,username,password);
 		return con;
 	}
 }
